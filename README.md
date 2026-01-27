@@ -53,3 +53,6 @@ VAJRA should intelligently operate in both offline and online modes, performing 
 
 ### Non-Goal 1: Not a mobile or Android application
 VAJRA is not intended to be a mobile or Android-based assistant in its initial versions. The focus of the project is to deliver a high-quality, deeply integrated desktop assistant experience rather than spreading functionality across multiple platforms. Mobile support may be considered in future versions but is not a goal for the current scope.
+
+### Non-Goal 2: Not a general-purpose search engine
+VAJRA is not designed to function as a general-purpose search engine or information index. While it can retrieve and summarize information when required, its primary role is to assist with tasks, decisions, and system interaction rather than replacing dedicated search platforms.
