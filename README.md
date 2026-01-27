@@ -39,3 +39,6 @@ VAJRA should be always available in the background and activated using a voice-b
 
 ### Core Feature 2: Natural voice and text interaction
 VAJRA should support both natural voice commands and typed input through a floating interface, allowing users to interact in the way that feels most comfortable at any moment. Spoken commands should be accurately transcribed into text and executed, providing transparency and control. This dual interaction model ensures flexibility, accessibility, and a smooth assistant experience across different usage scenarios.
+
+### Core Feature 3: Desktop and application control
+VAJRA should be capable of controlling core desktop functions and commonly used applications through voice or text commands. This includes tasks such as opening and closing applications, managing system actions, and performing simple automated workflows. The goal is to allow users to interact with their computer in a more natural and efficient way without relying solely on manual input.
