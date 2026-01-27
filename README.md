@@ -12,3 +12,8 @@ VAJRA is designed to act as a personal AI companion on the desktop that is alway
 
 ### Emotional Goal
 VAJRA should feel calm, reliable, and intuitive to interact with, making the user feel assisted rather than overwhelmed. Interactions with VAJRA should reduce effort in daily tasks and decisions, while maintaining a sense of control and trust. The assistant should feel responsive, respectful, and premium, creating a smooth and stress-free experience.
+
+## Problem Statement
+
+### Problem 1: Daily friction in desktop usage
+Desktop users often need to perform repetitive tasks such as opening applications, searching for information, adjusting system settings, or sending quick messages. These actions require multiple manual steps, switching between apps, and constant attention, which interrupts focus and wastes time. Existing tools either require explicit interaction or feel fragmented, making simple tasks more effortful than they should be.
