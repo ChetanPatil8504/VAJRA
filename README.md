@@ -28,3 +28,6 @@ Current desktop tools and assistants largely provide generic responses without c
 
 ### Primary Target User
 The primary target user of VAJRA is a desktop or laptop user who regularly uses their system for work, study, or personal tasks and values efficiency, convenience, and automation. This user prefers voice-based interaction to reduce manual effort and seeks a more natural and intelligent way to interact with their computer. They are comfortable with technology but want tools that feel intuitive rather than complex.
+
+### Secondary Target User
+The secondary target user of VAJRA includes students, creators, and professionals who spend long hours on their desktops and frequently multitask between applications. These users benefit from hands-free interaction, quick system control, and contextual assistance while focusing on their primary work. They value tools that save time and reduce interruptions without requiring constant manual input.
