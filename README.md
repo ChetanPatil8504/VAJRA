@@ -48,3 +48,8 @@ VAJRA should provide intelligent assistance for everyday decisions by considerin
 
 ### Core Feature 5: Offline and online intelligence
 VAJRA should intelligently operate in both offline and online modes, performing essential tasks without internet access while clearly indicating when a command requires connectivity. The assistant should seamlessly switch between modes without user intervention, ensuring reliability and transparency in different network conditions.
+
+## Non-Goals
+
+### Non-Goal 1: Not a mobile or Android application
+VAJRA is not intended to be a mobile or Android-based assistant in its initial versions. The focus of the project is to deliver a high-quality, deeply integrated desktop assistant experience rather than spreading functionality across multiple platforms. Mobile support may be considered in future versions but is not a goal for the current scope.
