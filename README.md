@@ -45,3 +45,6 @@ VAJRA should be capable of controlling core desktop functions and commonly used 
 
 ### Core Feature 4: Daily Life Intelligence
 VAJRA should provide intelligent assistance for everyday decisions by considering basic context such as time, usage patterns, and user preferences. Instead of offering generic responses, the assistant should suggest practical and situation-aware guidance for daily activities like routine planning and simple decision-making. This allows VAJRA to feel more personal, supportive, and human-like in daily use.
+
+### Core Feature 5: Offline and online intelligence
+VAJRA should intelligently operate in both offline and online modes, performing essential tasks without internet access while clearly indicating when a command requires connectivity. The assistant should seamlessly switch between modes without user intervention, ensuring reliability and transparency in different network conditions.
