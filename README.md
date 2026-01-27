@@ -17,3 +17,6 @@ VAJRA should feel calm, reliable, and intuitive to interact with, making the use
 
 ### Problem 1: Daily friction in desktop usage
 Desktop users often need to perform repetitive tasks such as opening applications, searching for information, adjusting system settings, or sending quick messages. These actions require multiple manual steps, switching between apps, and constant attention, which interrupts focus and wastes time. Existing tools either require explicit interaction or feel fragmented, making simple tasks more effortful than they should be.
+
+### Problem 2: Voice assistants are not built for desktop workflows
+Most existing voice assistants are primarily designed for mobile devices or smart home environments and do not integrate deeply with desktop workflows. On desktop systems, voice interaction often feels limited, inconsistent, or secondary to manual input. As a result, users are unable to rely on voice-based assistance for continuous desktop usage, reducing the potential of hands-free and natural interaction.
