@@ -20,3 +20,6 @@ Desktop users often need to perform repetitive tasks such as opening application
 
 ### Problem 2: Voice assistants are not built for desktop workflows
 Most existing voice assistants are primarily designed for mobile devices or smart home environments and do not integrate deeply with desktop workflows. On desktop systems, voice interaction often feels limited, inconsistent, or secondary to manual input. As a result, users are unable to rely on voice-based assistance for continuous desktop usage, reducing the potential of hands-free and natural interaction.
+
+### Problem 3: Lack of personalization in daily assistance
+Current desktop tools and assistants largely provide generic responses without considering the user’s daily context, preferences, or situation. This lack of personalization makes interactions feel robotic and disconnected from real-life needs. As a result, users are required to make additional decisions and adjustments themselves, reducing the effectiveness of assistance in everyday situations.
