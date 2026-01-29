@@ -1,19 +1,26 @@
-async function checkVajraStatus() {
-  try {
-    const response = await fetch("http://127.0.0.1:5000/status");
-    const data = await response.json();
+const vajraContainer = document.getElementById("vajra-container");
+const vajraText = document.querySelector(".vajra-text");
 
-    console.log("VAJRA STATUS:", data);
-
-    const title = document.querySelector("h1");
-    const subtitle = document.querySelector("p");
-
-    title.textContent = data.assistant;
-    subtitle.textContent = data.message;
-  } catch (error) {
-    console.error("Failed to connect to VAJRA brain", error);
-  }
+function setState(state, message) {
+  vajraContainer.className = state;
+  if (message) vajraText.textContent = message;
 }
 
-// Call backend when UI loads
-checkVajraStatus();
+/* TEMP DEMO FLOW (for testing UI only) */
+setState("idle", "Friday is ready");
+
+setTimeout(() => {
+  setState("listening", "Listening…");
+}, 2000);
+
+setTimeout(() => {
+  setState("thinking", "Thinking…");
+}, 4500);
+
+setTimeout(() => {
+  setState("responding", "Done.");
+}, 7000);
+
+setTimeout(() => {
+  setState("idle", "Friday is ready");
+}, 9000);

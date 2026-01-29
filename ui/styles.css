@@ -1,0 +1,157 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Page base */
+body {
+    background: transparent;
+    overflow: hidden;
+}
+
+/* Floating container */
+#vajra-container {
+    position: fixed;
+    bottom: 24px;              /* above taskbar */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+/* Glassmorphism bar */
+.vajra-glass {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    /* Size */
+    padding: 13px 48px;
+    min-width: 380px;
+
+    /* TRUE GLASS */
+    background: rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(26px) saturate(180%);
+    -webkit-backdrop-filter: blur(26px) saturate(180%);
+
+    border-radius: 999px;
+
+    /* Soft border like OS */
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    /* Floating depth */
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+        .vajra-glass {
+    transition:
+        box-shadow 0.35s ease,
+        background 0.35s ease,
+        backdrop-filter 0.35s ease,
+        transform 0.35s ease;
+}
+
+}
+
+.vajra-glass::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8%;
+    width: 84%;
+    height: 50%;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.65),
+        rgba(255, 255, 255, 0.05)
+    );
+
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+
+
+/* Text */
+.vajra-text {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+}
+/* Icon */
+.vajra-icon {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* =========================
+   VAJRA UI STATES
+========================= */
+
+/* IDLE */
+#vajra-container.idle .vajra-glass {
+    transform: scale(1);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    animation: idleBreath 4s ease-in-out infinite;
+}
+
+/* LISTENING */
+#vajra-container.listening .vajra-glass {
+    transform: scale(1.04);
+    box-shadow:
+        0 0 0 2px rgba(0, 120, 255, 0.25),
+        0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* THINKING */
+#vajra-container.thinking .vajra-glass {
+    transform: scale(1.02);
+    box-shadow:
+        0 0 0 2px rgba(120, 120, 120, 0.25),
+        0 16px 36px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONDING */
+#vajra-container.responding .vajra-glass {
+    transform: scale(1.03);
+    box-shadow:
+        0 0 0 2px rgba(0, 200, 120, 0.35),
+        0 20px 42px rgba(0, 0, 0, 0.38);
+}
+
+@keyframes idleBreath {
+    0% {
+        transform: scale(1);
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    }
+
+    50% {
+        transform: scale(1.028);
+        box-shadow:
+            0 18px 42px rgba(0, 0, 0, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    }
+}
+
