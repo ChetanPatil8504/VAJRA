@@ -1,5 +1,5 @@
 import subprocess
-import os
+from system_controller import change_volume
 
 APP_PATHS = {
     "chrome": r"C:\Program Files\Google\Chrome\Application\chrome.exe",
@@ -9,13 +9,19 @@ APP_PATHS = {
 
 def execute_action(intent_data):
     intent = intent_data.get("intent")
-    target = intent_data.get("target")
 
+    # Volume actions
+    if intent == "VOLUME":
+        action = intent_data.get("action")
+        change_volume(action)
+        return
+
+    # App actions
     if intent == "OPEN_APP":
+        target = intent_data.get("target")
         if target in APP_PATHS:
-            app_path = APP_PATHS[target]
             print(f"🚀 Opening {target}...")
-            subprocess.Popen(app_path)
+            subprocess.Popen(APP_PATHS[target])
         else:
             print(f"❌ App '{target}' is not supported yet.")
 

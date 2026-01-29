@@ -1,6 +1,22 @@
 def extract_intent(command_text):
     command_text = command_text.lower()
 
+    # Volume control intents
+    if "volume" in command_text or "sound" in command_text:
+
+        if "unmute" in command_text:
+            return {"intent": "VOLUME", "action": "unmute"}
+
+        elif "mute" in command_text:
+            return {"intent": "VOLUME", "action": "mute"}
+
+        elif "increase" in command_text or "up" in command_text:
+            return {"intent": "VOLUME", "action": "up"}
+
+        elif "decrease" in command_text or "down" in command_text:
+            return {"intent": "VOLUME", "action": "down"}
+
+    # App control intents
     if "open" in command_text:
         return {
             "intent": "OPEN_APP",
@@ -13,8 +29,4 @@ def extract_intent(command_text):
             "target": command_text.replace("close", "").replace("exit", "").strip()
         }
 
-    else:
-        return {
-            "intent": "UNKNOWN",
-            "target": None
-        }
+    return {"intent": "UNKNOWN"}
