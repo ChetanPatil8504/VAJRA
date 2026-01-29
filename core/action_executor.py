@@ -1,6 +1,7 @@
 import subprocess
 import psutil
 from system_controller import change_volume
+from automation_engine import run_automation
 
 APP_PATHS = {
     "chrome": r"C:\Program Files\Google\Chrome\Application\chrome.exe",
@@ -22,16 +23,23 @@ def close_app(process_name):
             closed = True
     return closed
 
+
 def execute_action(intent_data):
+    # ✅ DEFINE intent FIRST (THIS FIXES THE ERROR)
     intent = intent_data.get("intent")
 
-    # Volume actions
+    # 🔁 AUTOMATION
+    if intent == "AUTOMATION":
+        run_automation(intent_data.get("name"), execute_action)
+        return
+
+    # 🔊 VOLUME
     if intent == "VOLUME":
         action = intent_data.get("action")
         change_volume(action)
         return
 
-    # Open app
+    # 🚀 OPEN APP
     if intent == "OPEN_APP":
         target = intent_data.get("target")
         if target in APP_PATHS:
@@ -41,7 +49,7 @@ def execute_action(intent_data):
             print(f"❌ App '{target}' is not supported yet.")
         return
 
-    # Close app
+    # 🛑 CLOSE APP
     if intent == "CLOSE_APP":
         target = intent_data.get("target")
         if target in APP_PROCESS_NAMES:

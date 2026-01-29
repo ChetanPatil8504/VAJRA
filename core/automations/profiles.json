@@ -1,0 +1,12 @@
+{
+  "study_mode": [
+    {"type": "CLOSE_APP", "target": "chrome"},
+    {"type": "OPEN_APP", "target": "notepad"},
+    {"type": "VOLUME", "action": "down"}
+  ],
+  "focus_mode": [
+    {"type": "CLOSE_APP", "target": "chrome"},
+    {"type": "OPEN_APP", "target": "calculator"},
+    {"type": "VOLUME", "action": "mute"}
+  ]
+}

@@ -15,6 +15,15 @@ def extract_intent(command_text):
 
         elif "decrease" in command_text or "down" in command_text:
             return {"intent": "VOLUME", "action": "down"}
+        
+
+    # Automation intents
+    if "study mode" in command_text:
+        return {"intent": "AUTOMATION", "name": "study_mode"}
+
+    if "focus mode" in command_text:
+        return {"intent": "AUTOMATION", "name": "focus_mode"}
+
 
     # App control intents
     if "open" in command_text:
